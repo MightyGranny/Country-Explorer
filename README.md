@@ -1,11 +1,9 @@
 # 🌍 Country Explorer
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-
-![REST API](https://img.shields.io/badge/REST_API-005571?style=for-the-badge)
-
-![JSON](https://img.shields.io/badge/JSON-000000?style=for-the-badge&logo=json&logoColor=white)
-
-![Requests](https://img.shields.io/badge/Requests-2CA5E0?style=for-the-badge)
+- [Python Documentation](https://docs.python.org/3/)
+- [REST API Introduction](https://www.redhat.com/en/topics/api/what-is-a-rest-api)
+- [JSON Documentation](https://www.json.org/json-en.html)
+- [Requests Library](https://requests.readthedocs.io/en/latest/)
+- [REST Countries API](https://restcountries.com/)
 
 A beginner-friendly Python project that explores information about countries using a REST API. It fetches real-time country data and allows users to discover useful information about different countries.
 
