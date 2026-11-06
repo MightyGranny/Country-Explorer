@@ -1,0 +1,5 @@
+        print("Country:", country["names"]["common"])
+        print("Capital:", country["capitals"][0]["name"])
+        print("Population:", country["population"])
+        print("Area:", country["area"])
+        print("Currencies:", ", ".join([curr["name"] for curr in country["currencies"]]))
