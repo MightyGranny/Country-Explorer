@@ -1,12 +1,14 @@
 import requests
 import string
 title = "COUNTRY EXPLORER"
-print("=" * 60)
+def title_divider():
+    print("=" * 60)
+title_divider()
 print(title.center(60))
-print("=" * 60)
+title_divider()
 search_term = string.capwords(input("\nEnter search keyword: "))
 country_name = string.capwords(input("Enter exact country name to find: "))
-print("=" * 60)
+title_divider()
 URL = f'https://api.restcountries.com/countries/v5?q={search_term}'
 
 def fetch_countries() -> dict:
@@ -20,18 +22,18 @@ result = fetch_countries()  # Accessing the common name of the country
 countries = result["data"]["objects"]
 found = False
 if countries:
-    print("=" * 60)
+    title_divider()
     print("SEARCH RESULTS".center(60))
-    print("=" * 60)
+    title_divider()
     for number, country in enumerate(countries, start=1):
         if number <= 5:
             print(number, country["names"]["common"])
         if country["names"]["common"] == country_name:
             found = True
             print()
-            print("=" * 60)
+            title_divider()
             print("COUNTRY DETAILS".center(60))
-            print("=" * 60)
+            title_divider()
 
             print(f"{'Country':<12}: {country['names']['common']}")
             print(f"{'Capital':<12}: {country['capitals'][0]['name']}")
@@ -40,11 +42,11 @@ if countries:
             print(f"{'Currencies':<12}: {', '.join([curr['name'] for curr in country['currencies']])}")
             if found and number >= 5:
                 break  # Exit the loop after finding the country
-            print("=" * 60)
+            title_divider()
     if not found:
         print(f"No data found for {country_name}. Please check the country name and try again.")
-        print("=" * 60)
+        title_divider()
 else:
     print(f"No data found for {country_name}. Please check the country name and try again.")
-    print("=" * 60)
+    title_divider()
     found = False  # Set found to False to display the "not found" message below
